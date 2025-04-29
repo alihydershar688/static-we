@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ali Hyder's Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="showSection('home')">Home</a></li>
+      <li><a href="#about" onclick="showSection('about')">About</a></li>
+      <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="content-section">
+    <h1>Welcome to Ali Hyder's Website</h1>
+    <p>This is the landing page of a simple static website.</p>
+  </section>
+
+  <section id="about" class="content-section" style="display: none;">
+    <h2>About Me</h2>
+    <p>Ali Hyder is a passionate front-end developer currently leading the front-end team at Prosensia. He studies at Pak-Austria Fachhochschule Institute of Applied Science and Technology and has interned at ICreativez and Exetom Inc. With a strong foundation in HTML, CSS, JavaScript, and React.js, he is actively involved in community work and student leadership activities. He aspires to contribute to innovative web solutions and further grow in software engineering.</p>
+  </section>
+
+  <section id="contact" class="content-section" style="display: none;">
+    <h2>Contact Me</h2>
+    <p>Email: alihyderofficial@gmail.com</p>
+    <p>Mobile: +92 334 2792001</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
